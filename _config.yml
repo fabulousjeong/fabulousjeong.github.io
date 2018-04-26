@@ -1,24 +1,24 @@
-name: Jekyll Bulma
-description: "Jekyll Bulma Theme, Bulma.io CSS Framework Jekyll Template for Developers"
+name: Munan
+description: "Clear-up DeepLearning"
 baseurl: 
-url: http://erayaydin.github.io
-download: "https://github.com/erayaydin/jekyll-bulma/archive/master.zip"
+url: http://fabulousjeong.github.io
+download: "https://github.com/fabulousjeong/fabulousjeong.github.io/archive/master.zip"
 social:
-  github: erayaydin
-  email: aydineray@mail.com
-  facebook:
-  twitter: erayaydi
-  instagram:
+  github: fabulousjeong
+  email: fabulousjeong@gmail.com
+  facebook: fabulousjeong
+  twitter:
+  instagram: munan0614
   tumblr:
 author:
-  name: Eray AYDIN
-  bio: "Senior PHP Developer and Linux System Administrator, Free Software Fan, Archy (On Way Trust User), Junior Game Developer"
-  email: aydineray@mail.com
+  name: Munan Jeong
+  bio: "Senior Deeplearning and Graphics Developer"
+  email: fabulousjeong@gmail.com
   image: /assets/images/author.jpg
-  github: erayaydin
-  facebook: erayaydi
-  twitter: erayaydi
-  instagram:
+  github: fabulousjeong
+  facebook: fabulousjeong
+  twitter:
+  instagram: munan0614
   tumblr:
   show_on_post: true
 permalink: /:categories/:title/

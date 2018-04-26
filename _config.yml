@@ -1,6 +1,6 @@
 name: Munan
 description: "Clear-up DeepLearning"
-baseurl: 
+baseurl: .
 url: http://fabulousjeong.github.io
 download: "https://github.com/fabulousjeong/fabulousjeong.github.io/archive/master.zip"
 social:

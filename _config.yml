@@ -42,7 +42,7 @@ social: # jekyll-seo-tag > social overrides
   name: Munan # jekyll-seo-tag > real name
   links:  # jekyll-seo-tag > social aliases (sameAs)
     - https://twitter.com/munan0614
-    - https://www.facebook.com/Munan
+    - https://www.facebook.com/fabulousjeong
     - https://www.linkedin.com/in/fabulousjeong
     - https://plus.google.com/113602780864010645950
     - https://github.com/fabulousjeong
@@ -99,12 +99,13 @@ navigation_footer:
   #Created by David Darnes: https://darn.es
 
 social_links: # Appears in sidebar. Set the urls then uncomment and comment out as desired
-  Twitter: https://twitter.com/Munan
-  LinkedIn: https://www.linkedin.com/in/Munan
+  #Twitter: https://twitter.com/Munan
+  Facebook: https://www.facebook.com/fabulousjeong
+  Instagram: https://www.instagram.com/munan0614/
+  LinkedIn: https://www.linkedin.com/in/fabulousjeong
   Google+: https://plus.google.com/113602780864010645950
   GitHub: https://github.com/fabulousjeong
   link: https://fabulousjeong.github.io
-  Instagram: https://www.instagram.com/munan0614/
   RSS: /feed.xml
 
 sharing_links: # Appear at the bottom of single blog posts, uncomment and comment out as desired. Colours set the button colour

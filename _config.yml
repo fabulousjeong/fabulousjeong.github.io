@@ -75,7 +75,7 @@ encoding: utf-8 # Make sure the encoding is right
 lang: en-GB # Set the site language
 title: "Munan" # Site name or title, also used in jekyll-seo-tag
 logo: "/assets/logo.svg" # Site logo, also used in jekyll-seo-tag
-description: "Clean-up DeepLearning" # Site description and default description, also used in jekyll-seo-tag
+description: "서울대학교 졸업, 삼성전자 무선사업부 근무Clear-up DeepLearning" # Site description and default description, also used in jekyll-seo-tag
 url: "https://fabulousjeong.github.io" # Site url, also used in jekyll-seo-tag
 baseurl: ""
 repo: "https://github.com/fabulousjeong/fabulousjeong.github.io"
@@ -101,8 +101,8 @@ navigation_footer:
 social_links: # Appears in sidebar. Set the urls then uncomment and comment out as desired
   #Twitter: https://twitter.com/Munan
   Facebook: https://www.facebook.com/fabulousjeong
-  Instagram: https://www.instagram.com/munan0614/
   LinkedIn: https://www.linkedin.com/in/fabulousjeong
+  Instagram: https://www.instagram.com/munan0614/
   Google+: https://plus.google.com/113602780864010645950
   GitHub: https://github.com/fabulousjeong
   link: https://fabulousjeong.github.io

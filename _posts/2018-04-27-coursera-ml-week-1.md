@@ -1,8 +1,8 @@
 ---
 title: Week 1 Introduction
-category: [Coursera] Machine Learning
+category: CourseraMachineLearning
 excerpt: |
-  A pot still is a type of still used in distilling spirits such as whisky or brandy. Heat is applied directly to the pot containing the wash (for whisky) or wine (for brandy).
+  머신러닝이란?
 feature_text: |
   ## [Coursera] Machine Learning
   Andrew Ng의 Machine Learning 강의 정리

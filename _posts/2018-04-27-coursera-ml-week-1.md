@@ -59,7 +59,7 @@ ref: https://github.com/mahmoudparsian/data-algorithms-book/
 
 비클러스트링(Non-Clustering): "Cocktail Party Algorithm", 지저분한 데이터에서 특정 구조를 찾는 작업. 가령 r굉장히 시끄러운 파티에서 특정인의 목소리나, 노래를 찾는 작업. 아래에 이해에 도움이 되는 Quora의 답변을 링크로 남긴다. https://www.quora.com/What-is-the-difference-between-supervised-and-unsupervised-learning-algorithms
 
-### 하나의 변수에 대한 선형 회기(Linear regression)
+### 단 변수 선형 회기(Linear regression)
 
 ##### 모델 표현
 

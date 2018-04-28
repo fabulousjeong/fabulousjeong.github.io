@@ -75,7 +75,7 @@ encoding: utf-8 # Make sure the encoding is right
 lang: en-GB # Set the site language
 title: "Munan" # Site name or title, also used in jekyll-seo-tag
 logo: "/assets/logo.svg" # Site logo, also used in jekyll-seo-tag
-description: "디비디비딥러닝 Clear-up DeepLearning" # Site description and default description, also used in jekyll-seo-tag
+description: "디비디비딥러닝" # Site description and default description, also used in jekyll-seo-tag
 url: "https://fabulousjeong.github.io" # Site url, also used in jekyll-seo-tag
 baseurl: ""
 repo: "https://github.com/fabulousjeong/fabulousjeong.github.io"

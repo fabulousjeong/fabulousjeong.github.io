@@ -3,12 +3,14 @@ layout: default
 ---
 
 {% include site-header.html %}
-<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
 <main class="main  container">
 
   <div class="content">
 
-    <article class="article  article--page  typeset">
+    <article class="article  article--page  typeset"><script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
 
       {% if paginator.posts %}
         {% assign collectiondata = site.collections | where: "label", page.collectionpage | first %}

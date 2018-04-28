@@ -57,13 +57,13 @@ ref: https://github.com/mahmoudparsian/data-algorithms-book/
 
 클러스트링(Clustering): US Economy에서 쓰여진 1000개의 에세이가 주어 질 때, 관련성(단어 빈도, 페이지 수, 문장길이)에 기반하여 자동으로 에세이를 그룹핑함
 
-비클러스트링(Non-Clustering): "Cocktail Party Algorithm", 지저분한 데이터에서 특정 구조를 찾는 작업. 가령 r굉장히 시끄러운 파티에서 특정인의 목소리나, 노래를 찾는 작업. 아래에 이해에 도움이 되는 Quora의 답변을 링크로 남긴다. https://www.quora.com/What-is-the-difference-between-supervised-and-unsupervised-learning-algorithms
+비클러스트링(Non-Clustering): "Cocktail Party Algorithm", 지저분한 데이터에서 특정 구조를 찾는 작업. 가령 굉장히 시끄러운 파티에서 특정인의 목소리나, 노래를 찾는 작업. 아래에 이해에 도움이 되는 Quora의 답변을 링크로 남긴다. https://www.quora.com/What-is-the-difference-between-supervised-and-unsupervised-learning-algorithms
 
 ### 단 변수 선형 회기(Linear regression)
 
 ##### 모델 표현
 
-회기 문제를 다시 보면, 입력 변수에 대한 출력 변수를 연속 함수에 맞추고 있다. 일반적으로 선형회기(Linear regression)은 "단변량 선형회기 (univariate linear regression)"로 알려져 있다. 이 모델은 하나의 입력 $x$ 가 있을때 출력 $y$를 예상하는데 사용된다. 입/출력의 상관관계를 이미 알고 있으므로 지도 학습을 수행할 수 있다.
+회기 문제를 다시 보면, 입력 변수에 대한 출력 변수를 연속 함수에 맞추고 있다. 일반적으로 선형회기(Linear regression)은 "단변량 선형회기 (univariate linear regression)"로 알려져 있다. 이 모델은 하나의 입력 \\(x\\) 가 있을때 출력 \\(y\\)를 예상하는데 사용된다. 입/출력의 상관관계를 이미 알고 있으므로 지도 학습을 수행할 수 있다.
 
 ##### 가설 함수(Hypothesis Function)
 
@@ -71,7 +71,7 @@ ref: https://github.com/mahmoudparsian/data-algorithms-book/
 
 $$\hat{y}=h_{\theta}(x)=\theta_0+\theta_1x$$
 
-위 수식이 직선의 방정식과 유사하다는데 주목하자. $\theta_0$와 $\theta_1$에 의해 표현 되는 함수 $h_{\theta}(x)$에 의해 출력 $y$를 예측 한다. 즉 입력을 출력에 맵핑하는 함수(직선) $h_{\theta}$를 구하는 작업이다.
+위 수식이 직선의 방정식과 유사하다는데 주목하자. \\( \theta_0 \\)와 \\(\theta_1\\)에 의해 표현 되는 함수 \\(h_{\theta}(x)\\)에 의해 출력 \\(y\\)를 예측 한다. 즉 입력을 출력에 맵핑하는 함수(직선) \\(h_{\theta}\\)를 구하는 작업이다.
 
 
 

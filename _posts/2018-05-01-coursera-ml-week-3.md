@@ -136,7 +136,9 @@ $$ J(\theta) = \frac{1}{m} \cdot \left(-y^{T}\log(h)-(1-y)^{T}\log(1-h)\right)$$
 ##### Gradient Descent
 Gradient Descent는 아래와 같은 식으로 표현되는 것을 떠올려보자. 
 
-$\begin{align*}& Repeat \; \lbrace \newline & \; \theta_j := \theta_j - \alpha \dfrac{\partial}{\partial \theta_j}J(\theta) \newline & \rbrace\end{align*}$
+$$
+\begin{align*}& Repeat \; \lbrace \newline & \; \theta_j := \theta_j - \alpha \dfrac{\partial}{\partial \theta_j}J(\theta) \newline & \rbrace\end{align*}
+$$
 
 앞의 식을 미분하여 아래와 같은 식을 구할 수 있다. 
 

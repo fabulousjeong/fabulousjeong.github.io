@@ -1,8 +1,8 @@
 ---
-title: Week 2 Linear Regression with Multiple Variables
+title: Week 3 Logistic Regression
 category: CourseraMachineLearning
 excerpt: |
-  여러 변수에 대한 선형 회귀는 다변량 선형 회귀(multivariate linear regression)로 알려져 있다. 아래에 여러 입력 변수를 가지는 식에 대한 표기법이 있다. 
+  이제 회귀(Regression)문제를 분류(Classification)문제로 바꿔 생각해보자. 로지스틱회귀(Logistic Regression)이라는 단어에 대해 헷갈릴수 있는데 이는 관용적으로 붙여진 이름이며, 실제로는 회귀(Regression)가 아니라 분류(Classification) 문제를 다룬다.
 feature_text: |
   ## [Coursera] Machine Learning
   Andrew Ng의 Machine Learning 강의 정리
@@ -17,7 +17,7 @@ image: "./assets/images/coursera_ML/title.png"
 
 ### ML: Logistic Regression
 
-이제 회귀(Regression)문제에서 분류(Classification)문제로 바꿔 생각해보자. 로지스틱회귀(Logistic Regression)이라는 단어에 대해 헷갈릴수 있는데 이는 관용적으로 붙여진 이름이며, 실제로는 회귀(Regression)가 아니라 분류(Classification) 문제를 다룬다.
+이제 회귀(Regression)문제를 분류(Classification)문제로 바꿔 생각해보자. 로지스틱회귀(Logistic Regression)이라는 단어에 대해 헷갈릴수 있는데 이는 관용적으로 붙여진 이름이며, 실제로는 회귀(Regression)가 아니라 분류(Classification) 문제를 다룬다.
 
 
 ##### Binary Classification
@@ -163,4 +163,9 @@ $\begin{align*}\frac{\partial}{\partial \theta_j} J(\theta) &= \frac{\partial}{\
 $\nabla J(\theta) = \frac{1}{m} \cdot X^T \cdot \left(g\left(X\cdot\theta\right) - \vec{y}\right)$ 
 
 
-
+``` matlab
+function [jVal, gradient] = costFunction(theta)
+  jVal = [...code to compute J(theta)...];
+  gradient = [...code to compute derivative of J(theta)...];
+end
+```

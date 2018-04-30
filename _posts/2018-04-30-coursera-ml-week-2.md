@@ -2,7 +2,7 @@
 title: Week 2 Linear Regression with Multiple Variables
 category: CourseraMachineLearning
 excerpt: |
-  머신러닝이란? 머신러닝에 관한 2가지 정의가 있다. 첫 번째는 Arthur Samuel의 정의인 "구체적인 프로그래밍의 도움 없이 학습하는 능력을 컴퓨터에게 주는 학문"이다.
+  여러 변수에 대한 선형 회귀는 다변량 선형 회귀(multivariate linear regression)로 알려져 있다. 아래에 여러 입력 변수를 가지는 식에 대한 표기법이 있다. 
 feature_text: |
   ## [Coursera] Machine Learning
   Andrew Ng의 Machine Learning 강의 정리
@@ -18,7 +18,10 @@ image: './assets/images/coursera_ML/title.png'
 ![](http://cfile24.uf.tistory.com/image/2512693A58246F0D0D6F5D "머신러닝" "width:600px;height:200px;float:center;padding-left:10px;")
 여러 변수에 대한 선형 회귀는 다변량 선형 회귀(multivariate linear regression)로 알려져 있다. 아래에 여러 입력 변수를 가지는 식에 대한 표기법이 있다. 
 
-$\begin{align*}x_j^{(i)} &= \text{value of feature } j \text{ in the }i^{th}\text{ training example} \newline x^{(i)}& = \text{the column vector of all the feature inputs of the }i^{th}\text{ training example} \newline m &= \text{the number of training examples} \newline n &= \left| x^{(i)} \right| ; \text{(the number of features)} \end{align*}$
+$$j^{(i)} = \text{value of feature } j \text{ in the }i^{th}\text{ training example} $$ 
+$$x^{(i)} = \text{the column vector of all the feature inputs of the }i^{th}\text{ training example} $$
+$$m = \text{the number of training examples} $$
+$$n = \left| x^{(i)} \right| ; \text{(the number of features)} $$
 
 다변수일 때 가설함수(hypothesis function)는 아래와 같다. 
 
@@ -28,13 +31,14 @@ $h_\theta (x) = \theta_0 + \theta_1 x_1 + \theta_2 x_2 + \theta_3 x_3 + \cdots +
 
 위 식은 행렬 곱을 사용하여 아래와 같이 나타 낼 수 있다.  
 
-$\begin{align*}h_\theta(x) =\begin{bmatrix}\theta_0 \hspace{2em} \theta_1 \hspace{2em} ... \hspace{2em} \theta_n\end{bmatrix}\begin{bmatrix}x_0 \newline x_1 \newline \vdots \newline x_n\end{bmatrix}= \theta^T x\end{align*}$
+$$h_\theta(x) =\begin{bmatrix}\theta_0 \hspace{2em} \theta_1 \hspace{2em} ... \hspace{2em} \theta_n\end{bmatrix}\begin{bmatrix}x_0 \newline x_1 \newline \vdots \newline x_n\end{bmatrix}= \theta^T x$$
 
 위는 하나의 데이터 셋에 대한 표기법이다. 여러 데이터에 대해서는 다음과 같이 표기한다. $x_{0}^{(i)} =1 \text{ for } (i\in { 1,\dots, m } )$
 
  $\theta$와 $x$의 행렬로 표기할 때, 모든 데이터 $i$에 대해 $x^{(i)}_0=1$이다. 이는 행렬과 벡터의 크기를 맟주기 위해서다. 
 
-$\begin{align*}X = \begin{bmatrix}x^{(1)}_0 & x^{(1)}_1 \newline x^{(2)}_0 & x^{(2)}_1 \newline x^{(3)}_0 & x^{(3)}_1 \end{bmatrix}&,\theta = \begin{bmatrix}\theta_0 \newline \theta_1 \newline\end{bmatrix}\end{align*}$
+$$X = \begin{bmatrix}x^{(1)}_0  x^{(1)}_1 x^{(2)}_0  x^{(2)}_1 x^{(3)}_0  x^{(3)}_1 \end{bmatrix}$$
+$$,\theta = \begin{bmatrix}\theta_0\theta_1 \end{bmatrix}$$
 
 (m x 1)의 크기를 가지는 열 백터를 통해 아래와 같이 나타낼 수도 있다. 
 
@@ -55,7 +59,12 @@ $J(\theta) = \dfrac {1}{2m} (X\theta - \vec{y})^{T} (X\theta - \vec{y})$
 ##### 다 변수에서의 경사하강법(Gradient Descent)
 경사하강식 역시 같은 형식을 띄며 변수의 수 'n' 만큼 반복하면된다.
 
-$\begin{align*} & \text{repeat until convergence:} \; \lbrace \newline \; & \theta_0 := \theta_0 - \alpha \frac{1}{m} \sum\limits_{i=1}^{m} (h_\theta(x^{(i)}) - y^{(i)}) \cdot x_0^{(i)}\newline \; & \theta_1 := \theta_1 - \alpha \frac{1}{m} \sum\limits_{i=1}^{m} (h_\theta(x^{(i)}) - y^{(i)}) \cdot x_1^{(i)} \newline \; & \theta_2 := \theta_2 - \alpha \frac{1}{m} \sum\limits_{i=1}^{m} (h_\theta(x^{(i)}) - y^{(i)}) \cdot x_2^{(i)} \newline & \cdots \newline \rbrace \end{align*}$
+$$ \text{repeat until convergence:} \; \lbrace $$
+$$ \theta_0 := \theta_0 - \alpha \frac{1}{m} \sum\limits_{i=1}^{m} (h_\theta(x^{(i)}) - y^{(i)}) \cdot x_0^{(i)}$$ 
+$$\theta_1 := \theta_1 - \alpha \frac{1}{m} \sum\limits_{i=1}^{m} (h_\theta(x^{(i)}) - y^{(i)}) \cdot x_1^{(i)} $$
+$$\theta_2 := \theta_2 - \alpha \frac{1}{m} \sum\limits_{i=1}^{m} (h_\theta(x^{(i)}) - y^{(i)}) \cdot x_2^{(i)} $$
+$$ \cdots $$
+$$\rbrace $$
 
  
 
@@ -63,7 +72,9 @@ $\begin{align*} & \text{repeat until convergence:} \; \lbrace \newline \; & \the
 
  
 
-$\begin{align*}& \text{repeat until convergence:} \; \lbrace \newline \; & \theta_j := \theta_j - \alpha \frac{1}{m} \sum\limits_{i=1}^{m} (h_\theta(x^{(i)}) - y^{(i)}) \cdot x_j^{(i)} \; & \text{for j := 0..n}\newline \rbrace\end{align*}$
+$$ \text{repeat until convergence:} \; \lbrace $$
+$$\theta_j := \theta_j - \alpha \frac{1}{m} \sum\limits_{i=1}^{m} (h_\theta(x^{(i)}) - y^{(i)}) \cdot x_j^{(i)} \;  \text{for j := 0..n} $$
+$$\rbrace$$
 
 ##### 행렬 표기법
 경사하강법을 아래와 같이 간략히 표현 할 수 있다.  
@@ -76,7 +87,8 @@ $\nabla J(\theta) = \begin{bmatrix}\frac{\partial J(\theta)}{\partial \theta_0} 
 
 Gradient의 j번째 행은 두 항의 곱들을 합합 값이다. 
 
-$\begin{align*} \; &\frac{\partial J(\theta)}{\partial \theta_j} &=& \frac{1}{m} \sum\limits_{i=1}^{m} \left(h_\theta(x^{(i)}) - y^{(i)} \right) \cdot x_j^{(i)} \newline \; & &=& \frac{1}{m} \sum\limits_{i=1}^{m} x_j^{(i)} \cdot \left(h_\theta(x^{(i)}) - y^{(i)} \right) \end{align*}$
+$$\frac{\partial J(\theta)}{\partial \theta_j} = \frac{1}{m} \sum\limits_{i=1}^{m} \left(h_\theta(x^{(i)}) - y^{(i)} \right) \cdot x_j^{(i)} $$
+$$= \frac{1}{m} \sum\limits_{i=1}^{m} x_j^{(i)} \cdot \left(h_\theta(x^{(i)}) - y^{(i)} \right) $$
 
 종종 위의 식은 벡터의 곱(내적)으로 표현되며, 아래와 같이 쓸 수 있다. 
 

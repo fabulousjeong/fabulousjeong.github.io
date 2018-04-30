@@ -11,8 +11,8 @@ feature_text: |
   
   code: [https://github.com/fabulousjeong/ML-OctaveCode/](https://github.com/fabulousjeong/ML-OctaveCode/ "Code")
   
-feature_image: ../assets/images/coursera_ML/title.png
-image: ../assets/images/coursera_ML/title.png
+feature_image: "../assets/images/coursera_ML/title.png"
+image: "../assets/images/coursera_ML/title.png"
 ---
 ### ML: 서론
 
@@ -108,6 +108,7 @@ $$\theta_j := \theta_j - \alpha [\text{Slope of tangent aka derivative in j dime
 
 ##### 선형회귀에서의 경사하강법
 특히 선형 회귀의 경우에 적용하면, 위 그라디언트 강하식의 새로운 형태를 유도 할 수 있다. 실제 비용함수와 가설함수를 아래 식과 같이 대체 할 수 있다. 
+
 $$  \text{repeat until convergence: } \lbrace $$
 $$ \theta_0 :=  \theta_0 - \alpha \frac{1}{m} \sum\limits_{i=1}^{m}(h_\theta(x_{i}) - y_{i}) $$
 $$ \theta_1 :=  \theta_1 - \alpha \frac{1}{m} \sum\limits_{i=1}^{m}\left((h_\theta(x_{i}) - y_{i}) x_{i}\right) $$

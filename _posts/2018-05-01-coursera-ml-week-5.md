@@ -1,5 +1,5 @@
 ---
-title: Week 5 Neural Networks: Learning
+title: Week 5 Neural Networks - Learning
 category: CourseraMachineLearning
 excerpt: |
   먼저 밑에서 사용 할 몇몇 변수에 대해 정의하자.a) L = network 내 모든 레이어의 수 b) $s_l$ = 레이어에 있는 유닛의 수(바이어스 유닛 제외) c) K = 출력 유닛의 수 

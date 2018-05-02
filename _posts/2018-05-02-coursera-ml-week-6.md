@@ -37,13 +37,13 @@ image: "./assets/images/coursera_ML/title.png"
 
 ##### The test set error
 
-1. 선형회귀의 경우: $J_{test}(\Theta) = \dfrac{1}{2m_{test}} \sum_{i=1}^{m_{test}}(h_\Theta(x^{(i)}_{test}) - y^{(i)}_{test})^2$
+1. 선형회귀의 경우: $J_{test}(\Theta) = \dfrac{1}{2m_{test}} \sum_{i=1}^{m_{test}}(h_\Theta(x^{(i)}_{test}) - y^{(i)}_{test})^2$ 
 2. 분류/미분류에 대해 
 $err(h_\Theta(x),y) = \begin{matrix} 1 & \mbox{if } h_\Theta(x) \geq 0.5\ and\ y = 0\ or\ h_\Theta(x) < 0.5\ and\ y = 1\newline 0 & \mbox otherwise \end{matrix}$
 
 위의 식은 분류/미분류에 기반한 0 또는 1의 이진 결과를 출력한다. test error의 평균은 아래와 같다. 
 
-$\text{Test Error} = \dfrac{1}{m_{test}} \sum^{m_{test}}_{i=1} err(h_\Theta(x^{(i)}_{test}), y^{(i)}_{test})$
+$$\text{Test Error} = \dfrac{1}{m_{test}} \sum^{m_{test}}_{i=1} err(h_\Theta(x^{(i)}_{test}), y^{(i)}_{test})$$
 
 위의 식은 test데이터에서 미분류의 비율을 나타낸다. 
 

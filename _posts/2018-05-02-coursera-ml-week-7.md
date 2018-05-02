@@ -53,15 +53,15 @@ $J(\theta) = \frac{1}{m} \sum_{i=1}^m y^{(i)}(-\log(h_\theta(x^{(i)}))) + (1 - y
 
 위의 비용 함수와 같이 SVM에서도 $\text{cost}_1(z)$과 $\text{cost}_0(z)$로 나타 낼 수 있다.
 
-$J(\theta) = \frac{1}{m} \sum_{i=1}^m y^{(i)} \ \text{cost}_1(\theta^Tx^{(i)}) + (1 - y^{(i)}) \ \text{cost}_0(\theta^Tx^{(i)}) + \dfrac{\lambda}{2m}\sum_{j=1}^n \Theta^2_j$
+$$J(\theta) = \frac{1}{m} \sum_{i=1}^m y^{(i)} \ \text{cost}_1(\theta^Tx^{(i)}) + (1 - y^{(i)}) \ \text{cost}_0(\theta^Tx^{(i)}) + \dfrac{\lambda}{2m}\sum_{j=1}^n \Theta^2_j$$
 
 위의 식에서 m을 곱해 분모항을 제거 할 수 이다. 비용함수에 상수항을 곱하는 것은 최적화에 영향을 주지 않는다.
 
-$J(\theta) = \sum_{i=1}^m y^{(i)} \ \text{cost}_1(\theta^Tx^{(i)}) + (1 - y^{(i)}) \ \text{cost}_0(\theta^Tx^{(i)}) + \dfrac{\lambda}{2}\sum_{j=1}^n \Theta^2_j$
+$$J(\theta) = \sum_{i=1}^m y^{(i)} \ \text{cost}_1(\theta^Tx^{(i)}) + (1 - y^{(i)}) \ \text{cost}_0(\theta^Tx^{(i)}) + \dfrac{\lambda}{2}\sum_{j=1}^n \Theta^2_j$$
 
 표준에 맞춰 정규화 항에 $\lambda$대신 C를 사용해서 나타내자. 
 
-$J(\theta) = C\sum_{i=1}^m y^{(i)} \ \text{cost}_1(\theta^Tx^{(i)}) + (1 - y^{(i)}) \ \text{cost}_0(\theta^Tx^{(i)}) + \dfrac{1}{2}\sum_{j=1}^n \Theta^2_j$
+$$J(\theta) = C\sum_{i=1}^m y^{(i)} \ \text{cost}_1(\theta^Tx^{(i)}) + (1 - y^{(i)}) \ \text{cost}_0(\theta^Tx^{(i)}) + \dfrac{1}{2}\sum_{j=1}^n \Theta^2_j$$
 
 위 식은 앞에서 $C = \dfrac{1}{\lambda}$ 곱한 것과 같다. 
 
@@ -82,11 +82,19 @@ If y=1, we want $\Theta^Tx \geq 1$ (not just $\ge$ 0)
 If y=0, we want $\Theta^Tx \leq -1$ (not just $\le$ $0)
 
 위의 식에서 상수 C를 100,000 정도로 매우 큰 값으로 설정하면 최적화 과정에 의해 식 A가 0이 되게끔 Θ가 설정된다. 위에서 Θ를 다음과 같이 설정하였다. 
+
 $\Theta^Tx \geq 1$ If y=1 and $\Theta^Tx \leq -1$ If y=0.
+
 즉 만약 C가 매우 크다면 아래 식이 성립되어야 한다.
+
 $\sum_{i=1}^m y^{(i)}\text{cost}_1(\Theta^Tx) + (1 - y^{(i)})\text{cost}_0(\Theta^Tx) = 0$
+
 따라서 비용함수를 아래와 같이 간략화 할 수 있다. 
-$\begin{align*} J(\theta) = C \cdot 0 + \dfrac{1}{2}\sum_{j=1}^n \Theta^2_j \newline = \dfrac{1}{2}\sum_{j=1}^n \Theta^2_j \end{align*}$
+
+$$
+\begin{align*} J(\theta) = C \cdot 0 + \dfrac{1}{2}\sum_{j=1}^n \Theta^2_j \newline = \dfrac{1}{2}\sum_{j=1}^n \Theta^2_j \end{align*}
+$$
+
 로지스틱 회귀에서 특정군(Negative, Positive)을 나누는 경계면(Decision Boundary)을 떠올려보자. SVM에서는 특정군의 데이터에서 가능한 가장 먼 지점으로 경계면이 결정된다. 가장 가까운 데이터와 경계면 사이의 거리를 마진(Margin)이라한다. SVM은 이 마진을 최대화 하는 방향으로 학습되므로, 이를 Large Margin Classifiers라 부른다. 
 SVM은 Negative, Positive 데이터를 가장 큰 마진으로 분리한다. C가 클수록 Margin도 커진다. Negative, Positive 데이터들을 분리하는 경계선이 직선인 경우 데이터가 linearly separable하다. Decision Boundary의 영향을 받질 않아도 되는 예외적 데이터가 있을때 C를 줄일 수 있다. C를 증가/감소 시키는 것은 $\lambda$을 감소/증가 시키는 것과 비슷한 결과를 내며, 경계선을 단순화 할 수 있다.        
 
@@ -124,7 +132,7 @@ $x^{(i)} \rightarrow \begin{bmatrix}f_1^{(i)} = similarity(x^{(i)}, l^{(1)}) \ne
 
 SVM식에서 x를 f로 치환하여 아래와 같이 최적화 식으로 쓸 수 있다. 
 
-$\min_{\Theta} C \sum_{i=1}^m y^{(i)}\text{cost}_1(\Theta^Tf^{(i)}) + (1 - y^{(i)})\text{cost}_0(\theta^Tf^{(i)}) + \dfrac{1}{2}\sum_{j=1}^n \Theta^2_j$
+$$\min_{\Theta} C \sum_{i=1}^m y^{(i)}\text{cost}_1(\Theta^Tf^{(i)}) + (1 - y^{(i)})\text{cost}_0(\theta^Tf^{(i)}) + \dfrac{1}{2}\sum_{j=1}^n \Theta^2_j$$
 
 커널을 이용하여 f(i)로 나타내는 것은 SVM 뿐만 하니라 로지스틱 회귀에서도 사용 할 수 있다. 하지만 SVM의 가설함수형식의 알고리즘에서 커널을 사용할 때 계산 속도가 빠르므로, 커널 함수는 주로 SVM에서 사용된다. 
 

@@ -73,9 +73,9 @@ The Algorithm
 
 각 피쳐에 대해 $\mu_1,\dots,\mu_n,\sigma_1^2,\dots,\sigma_n^2$를 구한다. 
 
-$\mu_j = \dfrac{1}{m}\displaystyle \sum_{i=1}^m x_j^{(i)}$
+$$\mu_j = \dfrac{1}{m}\displaystyle \sum_{i=1}^m x_j^{(i)}$$
 
-$\sigma^2_j = \dfrac{1}{m}\displaystyle \sum_{i=1}^m(x_j^{(i)} - \mu_j)^2$
+$$\sigma^2_j = \dfrac{1}{m}\displaystyle \sum_{i=1}^m(x_j^{(i)} - \mu_j)^2$$
 
 이를 곱해서 p(x)를 구한다. 
 

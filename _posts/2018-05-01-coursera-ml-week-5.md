@@ -84,13 +84,16 @@ $$\dfrac{\partial J(\Theta)}{\partial \Theta_{i,j}^{(l)}} = \frac{1}{m}\sum_{t=1
 학습 데이터 $\lbrace (x^{(1)}, y^{(1)}) \cdots (x^{(m)}, y^{(m)})\rbrace$가 주어 졌을 때, 모든 (l,i,j)에 대해 $\Delta^{(l)}_{i,j}=0$으로 설정한다.
 
 한 개 data t=1에 대해서 
+
 - $a^{(1)} := x^{(t)}$으로 설정
 - 모든 $a^{(l)}$ (l=2,3,...,L)을 구하기 위해 Forward Propagation 수행
 - $y^{(t)}$를 이용하여 $\delta^{(L)} = a^{(L)} - y^{(t)}$를 계산
 - $\delta^{(l)} = ((\Theta^{(l)})^T \delta^{(l+1)}) a^{(l)} (1 - a^{(l)})$ 식을 통해 나머지  $\delta^{(L-1)}, \delta^{(L-2)},\dots,\delta^{(2)}$ 를 계산
 - $$\Delta^{(l)}_{i,j} := \Delta^{(l)}_{i,j} + a_j^{(l)} \delta_i^{(l+1)}$$ 를 계산
   벡터화 하면 다음과 같다. $$\Delta^{(l)} := \Delta^{(l)} + \delta^{(l+1)}(a^{(l)})^T$$
+
 - $D^{(l)}_{i,j} := \dfrac{1}{m}\left(\Delta^{(l)}_{i,j} + \lambda\Theta^{(l)}_{i,j}\right)$ if j≠0 
+
 - $D^{(l)}_{i,j} := \dfrac{1}{m}\Delta^{(l)}_{i,j}$ if j=0 
 
 $\Delta$는 값을 합산하여 편미분을 구하는 accumulator로 사용된다. 

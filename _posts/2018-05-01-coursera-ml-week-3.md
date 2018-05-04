@@ -13,6 +13,7 @@ feature_text: |
 
 feature_image: "https://i.imgur.com/jds8Wur.png"
 image: "https://i.imgur.com/jds8Wur.png"
+comment: true
 ---
 
 ### ML: Logistic Regression

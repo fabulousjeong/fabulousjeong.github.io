@@ -13,6 +13,7 @@ feature_text: |
 
 feature_image: "https://i.imgur.com/jds8Wur.png"
 image: "https://i.imgur.com/jds8Wur.png"
+comment: true
 ---
 ### ML:Linear Regression with Multiple Variables
 ![](http://cfile24.uf.tistory.com/image/2512693A58246F0D0D6F5D "머신러닝" "width:600px;height:200px;float:center;padding-left:10px;")

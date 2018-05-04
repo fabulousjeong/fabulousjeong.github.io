@@ -80,7 +80,7 @@ url: "https://fabulousjeong.github.io" # Site url, also used in jekyll-seo-tag
 baseurl: ""
 repo: "https://github.com/fabulousjeong/fabulousjeong.github.io"
 email: "me@daviddarnes.com"
-# disqus: "alembic-1" # Blog post comments, uncomment the option and set the site ID from your Disqus account
+disqus: "fabulousjeong" # Blog post comments, uncomment the option and set the site ID from your Disqus account
 avatarurl: "https://s.gravatar.com/avatar/6b3f3bcac286d8bd16daf208893cba9b?s=80" # Uses avatars for favicons to get multple sites, eg Gravatar, Twitter, GitHub
 # google_analytics: ''
 # service_worker: false # Will turn off the service worker if set to false

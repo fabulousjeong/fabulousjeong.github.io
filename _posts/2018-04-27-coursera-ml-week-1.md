@@ -6,13 +6,13 @@ excerpt: |
 feature_text: |
   ## [Coursera] Machine Learning
   Andrew Ng의 Machine Learning 강의 정리
-  
+
   ref: [https://www.coursera.org/learn/machine-learning/home/week/1](https://www.coursera.org/learn/machine-learning/home/week/1 "Coursera ML")
-  
+
   code: [https://github.com/fabulousjeong/ML-OctaveCode/](https://github.com/fabulousjeong/ML-OctaveCode/ "Code")
-  
-feature_image: "../assets/images/coursera_ML/title.png"
-image: "../assets/images/coursera_ML/title.png"
+
+feature_image: "https://i.imgur.com/jds8Wur.png"
+image: "https://i.imgur.com/jds8Wur.png"
 ---
 ### ML: 서론
 
@@ -83,9 +83,9 @@ $$\hat{y}=h_{\theta}(x)=\theta_0+\theta_1x$$
 
 $$J(\theta_0, \theta_1) = \dfrac {1}{2m} \displaystyle \sum _{i=1}^m \left ( \hat{y}_{i}- y_{i} \right)^2 = \dfrac {1}{2m} \displaystyle \sum _{i=1}^m \left (h_\theta (x_{i}) - y_{i} \right)^2$$
 
-잠시 살펴 보면, $\dfrac {1}{2} \bar{x}$ 에서 $\bar{x}$는 $(h_\theta (x_{i})-y_{i})$ 제곱의 평균, 즉 예상 값과 평균 값의 차이와 같다. 이 함수는 다른 말로 제곱 오차 함수(Squared error function) 또는 평균 제곱근 편차(Mean squared error)로 불린다. 평균은 절반으로 나눠지게 표현$(\dfrac {1}{2m})$ 되는데, 보통 그래디언트 하강(gradient descent) 계산의 편의를 위해 $\dfrac {1}{2}$ 항을 생략한다. 이제 실제 값과 비교하여 가설함수의 정확도를 측정 할 수 있다. 
+잠시 살펴 보면, $\dfrac {1}{2} \bar{x}$ 에서 $\bar{x}$는 $(h_\theta (x_{i})-y_{i})$ 제곱의 평균, 즉 예상 값과 평균 값의 차이와 같다. 이 함수는 다른 말로 제곱 오차 함수(Squared error function) 또는 평균 제곱근 편차(Mean squared error)로 불린다. 평균은 절반으로 나눠지게 표현$(\dfrac {1}{2m})$ 되는데, 보통 그래디언트 하강(gradient descent) 계산의 편의를 위해 $\dfrac {1}{2}$ 항을 생략한다. 이제 실제 값과 비교하여 가설함수의 정확도를 측정 할 수 있다.
 
- 위 그림과 같이 학습 데이터가 X-Y 평면에 뿌려져 있다고 시각적인 측면에서 생각해 보자. 뿌려진 데이터 위를 지나는 $h_{\theta}(x)$로 정의 된 직선을 그릴수 있다. 여기서 우리의 목적은 데이터와 직선사이의 거리의 제곱의 평균 값이 최소인 직선을 찾는 것이다. 가장 최선인 경우는 직선이 모든 데이터 위를 지나는 경우로 이때 $J(\theta_0, \theta_1)$는 $0$이다. 
+ 위 그림과 같이 학습 데이터가 X-Y 평면에 뿌려져 있다고 시각적인 측면에서 생각해 보자. 뿌려진 데이터 위를 지나는 $h_{\theta}(x)$로 정의 된 직선을 그릴수 있다. 여기서 우리의 목적은 데이터와 직선사이의 거리의 제곱의 평균 값이 최소인 직선을 찾는 것이다. 가장 최선인 경우는 직선이 모든 데이터 위를 지나는 경우로 이때 $J(\theta_0, \theta_1)$는 $0$이다.
 ![](http://cfile2.uf.tistory.com/image/262B763F5819E3A50D7981 "비용함수" "width:600px;height:300px;float:center;padding-left:10px;")
 ![](http://cfile23.uf.tistory.com/image/2612633F5819E3A42C7512 "비용함수" "width:600px;height:300px;float:center;padding-left:10px;")
 
@@ -93,49 +93,29 @@ $$J(\theta_0, \theta_1) = \dfrac {1}{2m} \displaystyle \sum _{i=1}^m \left ( \ha
 
  지금 까지 가설함수와 이 함수가 주어진 데이터에 얼마나 잘 맞는지를 측정하는 법에 대해서 알아 보았다. 이제 가설함수 내 파라미터를 예측하는 과정이 남았다. 경사하강법을 통해 알아 보자.
 
- $\theta_{0}$와 $\theta_{1}$의 평면위에 가설함수의 그래프를 생각해보자(비용함수의 그래프를 그려보자).  이것은 높은 단계의 추상화 과정을 동반하므로, 다소 어려울 수 있다. 
+ $\theta_{0}$와 $\theta_{1}$의 평면위에 가설함수의 그래프를 생각해보자(비용함수의 그래프를 그려보자).  이것은 높은 단계의 추상화 과정을 동반하므로, 다소 어려울 수 있다.
 ![](http://cfile4.uf.tistory.com/image/261C423F5819E3A21F6A8F "비용함수" "width:600px;height:300px;float:center;padding-left:10px;")
-위 그림과 같이 $\theta_{0}$를 x축으로 $\theta_{1}$을 y축으로 두고, 비용함수의 값을 z축에 놓는다. 그래프 위의 점은 $\theta$ 파라미터 값에 대한 가설함수의 비용함수 결과값이다. 우리는 이미 최적의 가설함수를 이루는 파라미터 값은 비용함수 그래프의 최소 값(minimum)에서의 파라미터 값과 같다는 것을 알고있다. 최소값을 가지는 비용함수의 파라미터 값을 구하는 한 가지 방법은 비용함수의 접선(derivative)을 도입하는데서 시작한다. 접선의 경사도는 그 점에서의 도함수이며, 이 값은 움직여야할 최적의 방향을 알려준다. 아래와 같이 매 스텝마다 학습속도(learning rate) $\alpha$만큼 접선 방향으로 하강한다. 
+위 그림과 같이 $\theta_{0}$를 x축으로 $\theta_{1}$을 y축으로 두고, 비용함수의 값을 z축에 놓는다. 그래프 위의 점은 $\theta$ 파라미터 값에 대한 가설함수의 비용함수 결과값이다. 우리는 이미 최적의 가설함수를 이루는 파라미터 값은 비용함수 그래프의 최소 값(minimum)에서의 파라미터 값과 같다는 것을 알고있다. 최소값을 가지는 비용함수의 파라미터 값을 구하는 한 가지 방법은 비용함수의 접선(derivative)을 도입하는데서 시작한다. 접선의 경사도는 그 점에서의 도함수이며, 이 값은 움직여야할 최적의 방향을 알려준다. 아래와 같이 매 스텝마다 학습속도(learning rate) $\alpha$만큼 접선 방향으로 하강한다.
 ![](http://cfile24.uf.tistory.com/image/24127F3F5819E3A32C4209 "비용함수" "width:600px;height:300px;float:center;padding-left:10px;")
-경사하강 알고리즘은 아래와 같다. 
+경사하강 알고리즘은 아래와 같다.
 
 수렴 할때 까지 반복:
 $$\theta_j := \theta_j - \alpha \frac{\partial}{\partial \theta_j} J(\theta_0, \theta_1)$$
-여기서 j=0,1 은 각 feature의 인덱스 번호와 같다. 위 식은 직관적으로 아래와 같이 생각 할 수 있다. 
+여기서 j=0,1 은 각 feature의 인덱스 번호와 같다. 위 식은 직관적으로 아래와 같이 생각 할 수 있다.
 
 수렴 할때 까지 반복:
 $$\theta_j := \theta_j - \alpha [\text{Slope of tangent aka derivative in j dimension}]$$
 
 ##### 선형회귀에서의 경사하강법
-특히 선형 회귀의 경우에 적용하면, 위 그라디언트 강하식의 새로운 형태를 유도 할 수 있다. 실제 비용함수와 가설함수를 아래 식과 같이 대체 할 수 있다. 
+특히 선형 회귀의 경우에 적용하면, 위 그라디언트 강하식의 새로운 형태를 유도 할 수 있다. 실제 비용함수와 가설함수를 아래 식과 같이 대체 할 수 있다.
 
 $$  \text{repeat until convergence: } \lbrace $$
 $$ \theta_0 :=  \theta_0 - \alpha \frac{1}{m} \sum\limits_{i=1}^{m}(h_\theta(x_{i}) - y_{i}) $$
 $$ \theta_1 :=  \theta_1 - \alpha \frac{1}{m} \sum\limits_{i=1}^{m}\left((h_\theta(x_{i}) - y_{i}) x_{i}\right) $$
 $$   \rbrace $$
 
-여기서 m은 학습 데이터의 크기 이며, $\theta_{0}$는 $\theta_{1}$과 같이 동시에 바뀌는 상수이며, $x_{i}$, $y_{i}$는 학습데이터의 값이다. $\theta_{j}$에 따라 $\theta_{0}$과 $\theta_{1}$ 두 가지 경우로 나눠서 식이 세워지며, $\theta_{1}$에서는 도함수에 의해 $x_{i}$가 곱해진다. 요약하면, 가설함수를 설정한 다음 경사하강법의 식을 반복하는 과정을 통해 점점 더 정확한 가설함수를 얻을 수 있다. 
+여기서 m은 학습 데이터의 크기 이며, $\theta_{0}$는 $\theta_{1}$과 같이 동시에 바뀌는 상수이며, $x_{i}$, $y_{i}$는 학습데이터의 값이다. $\theta_{j}$에 따라 $\theta_{0}$과 $\theta_{1}$ 두 가지 경우로 나눠서 식이 세워지며, $\theta_{1}$에서는 도함수에 의해 $x_{i}$가 곱해진다. 요약하면, 가설함수를 설정한 다음 경사하강법의 식을 반복하는 과정을 통해 점점 더 정확한 가설함수를 얻을 수 있다.
 
 선형회귀에서의 경사하강법 시각적 예시
 
-링크의 영상(https://www.youtube.com/watch?v=WnqQrPNYz5Q)에서 가설함수가 어떻게 오차를 줄이면서 성능을 증가 시키는지 시각적으로 볼 수 있다. 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+링크의 영상(https://www.youtube.com/watch?v=WnqQrPNYz5Q)에서 가설함수가 어떻게 오차를 줄이면서 성능을 증가 시키는지 시각적으로 볼 수 있다.

@@ -10,4 +10,5 @@ aside: true
 
 #About this site
 답러닝 관련 논문 및 강의 자료 정리
-Migrating from [Tistory](http://fabj.tistory.com)
+
+[Tistory](http://fabj.tistory.com)에서 이사 중....

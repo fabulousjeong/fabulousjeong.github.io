@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://fabulousjeong.github.io/sitemap.xml

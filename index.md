@@ -8,7 +8,6 @@ excerpt: 답러닝 관련 논문 및 강의 자료 정리
 aside: true
 ---
 
-#About this site
-답러닝 관련 논문 및 강의 자료 정리
+답러닝 관련 논문 및 강의자료 정리용 블로그 입니다. 
 
 [Tistory](http://fabj.tistory.com)에서 이사 중....

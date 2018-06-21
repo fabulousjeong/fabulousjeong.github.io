@@ -7,9 +7,9 @@ feature_text: |
   ## [Coursera] Machine Learning
   Andrew Ng의 Machine Learning 강의 정리
 
-  ref: [https://www.coursera.org/learn/machine-learning/home/week/1](https://www.coursera.org/learn/machine-learning/home/week/1 "Coursera ML")
+  ref: https://www.coursera.org/learn/machine-learning/home/week/1
 
-  code: [https://github.com/fabulousjeong/ML-OctaveCode/](https://github.com/fabulousjeong/ML-OctaveCode/ "Code")
+  code: https://github.com/fabulousjeong/ML-OctaveCode/
 
 feature_image: "https://i.imgur.com/jds8Wur.png"
 image: "https://i.imgur.com/jds8Wur.png"
